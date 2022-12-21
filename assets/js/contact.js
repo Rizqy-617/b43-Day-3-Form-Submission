@@ -8,15 +8,15 @@ function submitData() {
 
     // Pengkondisian
     if (name == '') {
-        return
+        return alert('Nama harus di isi')
     }else if (email == '') {
-        return
+        return alert('Email harus di isi')
     }else if (phone == '') {
-        return
+        return alert('Nomor harus di isi')
     }else if (subject == '') {
-        return
+        return alert('Subject harus di isi')
     }else if (message == '') {
-        return
+        return alert('Message harus di isi')
     } ;
 
     let emailReceiver = "rizqyandriansyah617@gmail.com";
@@ -24,5 +24,15 @@ function submitData() {
     let link = document.createElement('a') ;
     link.href = `mailto: ${emailReceiver}?subject=${subject}&body=Hallo nama saya ${name}, ${message}, silahkan kontak saya di nomor ${phone}`
     link.click() ;
+
+    let dataPengirim = {
+        name,
+        email,
+        phone,
+        subject,
+        message
+    }
+
+    console.log(dataPengirim)
 
 }
